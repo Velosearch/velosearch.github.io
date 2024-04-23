@@ -27,6 +27,12 @@ body {
   font-family: 'Google Sans', sans-serif;
 }
 
+.pre {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px 0;
+}
 
 .publication-title {
 }

@@ -233,15 +233,72 @@
     </div>
   </section> -->
 <!--End paper poster -->
+<section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <!-- <div class="is-four-fifths"> -->
+        <!-- <h2 class="title is-3">Installment Instructions</h2>
+        <div class="content has-text-left">
+          <h3 class="title is-4">1. Environment Requirement</h3>
+          <p>Rust version: 1.68.0</p>
+          <p>OS: 20.04.1-Ubuntu</p>
+          <p>CPU: x86\_64 and supports AVX512, AVX, SSE4.0 and SSE SIMD instruction extensions.</p>
+        </div> -->
+        <div class="content has-text-justified">
+        <h2 class="title is-3">Installment Instructions</h2>
+        <h3>1. Env requirement</h3>
+        <ul>
+            <li>Rust version: 1.68.0</li>
+            <li>OS: 20.04.1-Ubuntu</li>
+            <li>CPU: x86_64 and supports AVX512, AVX, SSE4.0 and SSE SIMD instruction extensions.</li>
+        </ul>
+
+        <h3>2. Setup</h3>
+
+        <h3>Install Rust</h3>
+        <pre><code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s --default-toolchain 1.68.0</code></pre>
+
+        <h3>Pull dependences</h3>
+        <pre><code>git submodule update</code></pre>
+
+        <h3>Compile</h3>
+        <pre><code>cargo build --release</code></pre>
+
+        <h3>3. Usage</h3>
+
+        <h3>Evalute batched search queries</h3>
+        <p>Command: (the bin is generated after the rustc compilation)</p>
+        <pre><code>./target/release/fastful-search</code></pre>
+        <p>help info:</p>
+        <pre><code>Usage: fastfull-search [OPTIONS] --handler &lt;HANDLER&gt; --base &lt;BASE&gt; [PATH]...
+
+        Arguments:
+          [PATH]...  file path
+
+        Options:
+          -p, --partition-num &lt;PARTITION_NUM&gt;  
+          -b, --batch-size &lt;BATCH_SIZE&gt;        
+              --base &lt;BASE&gt;                    
+          -d, --dump-path &lt;DUMP_PATH&gt;          
+          -h, --help                           Print help</code></pre>
+
+        <h3>Interactive full-text search mode:</h3>
+        <p>Command: (the bin is generated after the compilation)</p>
+        <pre><code>./target/release/do_query &lt;idx_dir&gt; &lt;thread_num&gt;</code></pre>
+        </div>
+      <!-- </div> -->
+    </div>
+  </div>
+</section>
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
+  <!-- <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>TBD.</code></pre>
     </div>
-</section>
+</section> -->
 <!--End BibTex citation -->
 
 
