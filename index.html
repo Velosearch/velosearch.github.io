@@ -72,9 +72,8 @@
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div> -->
 
-                  <div class="column has-text-centered">
+                  <!-- <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
                       <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -83,7 +82,7 @@
                         </span>
                         <span>Paper</span>
                       </a>
-                    </span>
+                    </span> -->
 
                     <!-- Supplementary PDF link -->
                     <span class="link-block">
@@ -103,20 +102,20 @@
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code</span>
+                    <span>Source Code</span>
                   </a>
                 </span>
 
                 <!-- ArXiv abstract Link -->
-                <!-- <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                <span class="link-block">
+                  <a href="https://github.com/Velosearch/velosearch" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                    <i class="ai ai-arxiv"></i>
+                    <i class="fab fa-github"></i>
                   </span>
-                  <span>arXiv</span>
+                  <span>Code Document</span>
                 </a>
-              </span> -->
+              </span>
             </div>
           </div>
         </div>
@@ -160,78 +159,15 @@
 </section>
 <!-- End paper abstract -->
 
-
-
-
-
-<!-- Youtube video -->
-<!-- <section class="hero is-small is-light"> -->
-  <!-- <div class="hero-body"> -->
-    <!-- <div class="container"> -->
-      <!-- Paper video. -->
-      <!-- <h2 class="title is-3">Video Presentation</h2> -->
-      <!-- <div class="columns is-centered has-text-centered"> -->
-        <!-- <div class="column is-four-fifths"> -->
-          
-          <!-- <div class="publication-video"> -->
-            <!-- Youtube embed code here -->
-            <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-          <!-- </div> -->
-        <!-- </div> -->
-      <!-- </div> -->
-    <!-- </div> -->
-  <!-- </div> -->
-<!-- </section> -->
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
+<!-- <section class="section hero">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="content has-text-justified">
+        test
       </div>
     </div>
   </div>
 </section> -->
-<!-- End video carousel -->
-
-
-
-
-
-
-<!-- Paper poster -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section> -->
 <!--End paper poster -->
 <section class="section hero">
   <div class="container is-max-desktop">
@@ -245,12 +181,13 @@
           <p>CPU: x86\_64 and supports AVX512, AVX, SSE4.0 and SSE SIMD instruction extensions.</p>
         </div> -->
         <div class="content has-text-justified">
+        
         <h2 class="title is-3">Installment Instructions</h2>
         <h3>1. Env requirement</h3>
         <ul>
-            <li>Rust version: 1.68.0</li>
-            <li>OS: 20.04.1-Ubuntu</li>
-            <li>CPU: x86_64 and supports AVX512, AVX, SSE4.0 and SSE SIMD instruction extensions.</li>
+            <li><b>Rust version</b>: 1.68.0</li>
+            <li><b>OS</b>: 20.04.1-Ubuntu</li>
+            <li><b>CPU</b>: x86_64 and supports AVX512, AVX, SSE4.0 and SSE SIMD instruction extensions.</li>
         </ul>
 
         <h3>2. Setup</h3>
@@ -259,14 +196,14 @@
         <pre><code>curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s --default-toolchain 1.68.0</code></pre>
 
         <h3>Pull dependences</h3>
-        <pre><code>git submodule update</code></pre>
+        <pre><code>git clone https://github.com/Velosearch/velosearch<br>cd velosearch<br>git submodule update</code></pre>
 
         <h3>Compile</h3>
         <pre><code>cargo build --release</code></pre>
 
         <h3>3. Usage</h3>
 
-        <h3>Evalute batched search queries</h3>
+        <h3 class="title is-4">3.1 Evalute batched search queries</h3>
         <p>Command: (the bin is generated after the rustc compilation)</p>
         <pre><code>./target/release/fastful-search</code></pre>
         <p>help info:</p>
@@ -280,11 +217,84 @@
           -b, --batch-size &lt;BATCH_SIZE&gt;        
               --base &lt;BASE&gt;                    
           -d, --dump-path &lt;DUMP_PATH&gt;          
-          -h, --help                           Print help</code></pre>
+          -h, --help     Print help</code></pre>
 
         <h3>Interactive full-text search mode:</h3>
         <p>Command: (the bin is generated after the compilation)</p>
         <pre><code>./target/release/do_query &lt;idx_dir&gt; &lt;thread_num&gt;</code></pre>
+
+        <h2 class="title is-3">Datasets Download</h2>
+        <table>
+          <caption>Datasets Statistics</caption>
+          <thead>
+              <tr>
+                  <th>Corpus</th>
+                  <th>#Documents</th>
+                  <th>#Terms</th>
+                  <th>#Words</th>
+                  <th>Usage</th>
+                  <th>Download</th>
+                  <th>Queries</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Cranelfield&nbsp;(CF)</td>
+                  <td>1.4 K</td>
+                  <td>7.4 K</td>
+                  <td>0.2 M</td>
+                  <td>1.5 MB</td>
+                  <td><a href="http://ir.dcs.gla.ac.uk/resources/test_collections/cran/cran.tar.gz">Link</a></td>
+                  <td><a href="#">Link</a></td>
+              </tr>
+              <tr>
+                  <td>Antique&nbsp;(AN)</td>
+                  <td>0.42 M</td>
+                  <td>0.5 M</td>
+                  <td>0.5 M</td>
+                  <td>136&nbsp;MB</td>
+                  <td><a href="https://ciir.cs.umass.edu/downloads/Antique/antique-collection.txt">Link</a></td>
+                  <td><a href="#">Link</a></td>
+              </tr>
+              <tr>
+                  <td>Argsme&nbsp;(AR)</td>
+                  <td>0.36 M</td>
+                  <td>1.3 M</td>
+                  <td>0.13 B</td>
+                  <td>545&nbsp;MB</td>
+                  <td><a href="https://zenodo.org/record/4139439/files/argsme-1.0-cleaned.zip">Link</a></td>
+                  <td><a href="#">Link</a></td>
+              </tr>
+              <tr>
+                  <td>Logs&nbsp;(LG)</td>
+                  <td>11 M</td>
+                  <td>0.7 M</td>
+                  <td>0.7 M</td>
+                  <td>1.8 GB</td>
+                  <td><a href="https://github.com/logpai/loghub/blob/master/HDFS#hdfs_v1">Link</a></td>
+                  <td><a href="#">Link</a></td>
+              </tr>
+              <tr>
+                  <td>Wikipedia&nbsp;(WP)</td>
+                  <td>4.3 M</td>
+                  <td>3.7 M</td>
+                  <td>0.11 B</td>
+                  <td>7.3 GB</td>
+                  <td><a href="https://www.dropbox.com/s/wwnfnu441w1ec9p/wiki-articles.json.bz2">Link</a></td>
+                  <td><a href="#">Link</a></td>
+              </tr>
+              <tr>
+                  <td>Istella22&nbsp;(IT)</td>
+                  <td>8.1 M</td>
+                  <td>0.6 M</td>
+                  <td>0.19 B</td>
+                  <td>26 GB</td>
+                  <td><a href="https://www.istella.ai/dataset/istella22.tar.gz">Link</a></td>
+                  <td><a href="#">Link</a></td>
+              </tr>
+              <!-- Add more rows as needed -->
+          </tbody>
+      </table>
         </div>
       <!-- </div> -->
     </div>
