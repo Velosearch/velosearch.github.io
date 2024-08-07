@@ -52,7 +52,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-2 publication-title">Enabling Efficient In-Memory Full-Text Search with Vectorization on Compacted Columnar Format</h1>
+            <h1 class="title is-2 publication-title">Columnar Formatted Inverted Index for Highly-paralleled, Vectorized Query Processing </h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -150,7 +150,28 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+<!--             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit. -->
+          Inverted index is a basic tool in many data-intensive
+applications. Though numerous efforts have been made on
+efficient inverted index-based query processing, existing schemes
+do not achieve the expected performance for modern data centers,
+in which servers are equipped with powerful CPUs and relatively
+large memory. Through comprehensive measurement studies, we
+identify the root course is that the data formats for index repre-
+sentation make it unfeasible to design efficient query execution
+algorithms on top of it, which results in poor parallel query
+support and waste CPU computation. Driven by the findings, we
+propose to reconcile the in-memory index as columnar structures.
+To enable this idea, we construct the compact columnar format
+(i.e., Cocoa) that achieves both desirable space efficiency and
+maintains the capability for efficient searching support. With
+Cocoa, we design an efficient query executing scheme that utilizes
+vectorized batch processing to avoid frequent branch prediction,
+as well as clause enumeration with pruning to save the overhead
+of intermediate batch materialization. We build an open-source
+system VeloSearch to embody our design; experimental results
+show that VeloSearch achieves ∼30× throughput compared with
+state-of-the-art search libraries such as Lucene and Tantivy.
           </p>
         </div>
       </div>
